@@ -59,7 +59,7 @@ export default function Navbar() {
             <img src={cwlogo} className={classes.logo }/>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            <span>{"< EceveGülce /> "}</span>
+          ────<span>{"< EceveGülce /> "}</span>BLOG────
           </Typography>
           {auth && (
             <div>
