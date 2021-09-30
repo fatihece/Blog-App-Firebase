@@ -26,7 +26,10 @@ const useStyles = makeStyles((theme) => ({
     "& span": {
       fontSize: 30,
       color: "wheat",
-    },
+    },  
+  },
+  appBar: {
+    backgroundColor: "#046582"
   },
   logo: {
     width: 40,
@@ -56,12 +59,11 @@ export default function Navbar() {
       <AppBar position="static"> 
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <img src={cwlogo} className={classes.logo }/>
+            <img src={cwlogo} className={classes.logo } alt=""/>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
           ────<span>{"< EceveGülce /> "}</span>BLOG────
           </Typography>
-          {auth && (
             <div>
               <IconButton
                 aria-label="account of current user"
@@ -91,7 +93,6 @@ export default function Navbar() {
                 <MenuItem onClick={handleClose}>My account</MenuItem>
               </Menu>
             </div>
-          )}
         </Toolbar>
       </AppBar>
     </div>
