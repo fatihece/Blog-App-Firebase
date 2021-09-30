@@ -30,18 +30,16 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 30,
       color: "wheat",
     },
-    linkStyle: {
-      textDecoration: "none",
-      color: "black",
-    },
-
-
   },
   appBar: {
     backgroundColor: "#046582",
   },
   logo: {
     width: 40,
+  },
+  linkStyle: {
+    textDecoration: "none",
+    color: "black",
   },
 }));
 
@@ -51,6 +49,8 @@ export default function Navbar() {
   const open = Boolean(anchorEl);
 
   const { currentUser } = useAuth();
+
+  console.log(currentUser);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -86,7 +86,30 @@ export default function Navbar() {
             >
               <AccountCircle style={{ fontSize: "40px" }} />
             </IconButton>
-            {currentUser?.email ? null : (
+            {currentUser?.email ? (
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <Link to="/login" className={classes.linkStyle}>
+                  <MenuItem onClick={handleClose}>Login</MenuItem>
+                </Link>
+                <Link to="/register" className={classes.linkStyle}>
+                  <MenuItem onClick={handleClose}>Register</MenuItem>
+                </Link>
+              </Menu>
+            ) : (
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorEl}
