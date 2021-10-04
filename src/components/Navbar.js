@@ -73,7 +73,7 @@ export default function Navbar() {
             <img src={cwLogo} alt="logo" className={classes.logo} />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            ──── <span>{"<Ece&Gülce />"}</span> BLOG ────
+            ──── <span>{"<Clarusway IT />"}</span> BLOG ────
           </Typography>
 
           <div>
@@ -102,11 +102,14 @@ export default function Navbar() {
                 open={open}
                 onClose={handleClose}
               >
-                <Link to="/login" className={classes.linkStyle}>
-                  <MenuItem onClick={handleClose}>Login</MenuItem>
+                <Link to="/profile" className={classes.linkStyle}>
+                  <MenuItem onClick={handleClose}>Profile</MenuItem>
                 </Link>
-                <Link to="/register" className={classes.linkStyle}>
-                  <MenuItem onClick={handleClose}>Register</MenuItem>
+                <Link to="/new-blog" className={classes.linkStyle}>
+                  <MenuItem onClick={handleClose}>New Blog</MenuItem>
+                </Link>
+                <Link to="/login" className={classes.linkStyle}>
+                  <MenuItem onClick={handleClose}>Logout</MenuItem>
                 </Link>
               </Menu>
             ) : (
