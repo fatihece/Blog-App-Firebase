@@ -2,10 +2,11 @@ import { TvRounded } from "@material-ui/icons";
 import React, { useContext, createContext, useState, useEffect } from "react";
 import { auth, googleProvider } from "../utils/firebaseUtil";
 
-//! Create context for autentication data
+
+// Create context for autentication data
 const AuthContext = createContext();
 
-//! Define a function to get data from Auth context
+// Define a function to get data from Auth context
 export function useAuth() {
   return useContext(AuthContext);
 }
