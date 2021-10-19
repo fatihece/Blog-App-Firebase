@@ -15,6 +15,7 @@ import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
   return (
+
     <Router>
       <Navbar />
       <Switch>
@@ -28,6 +29,7 @@ const AppRouter = () => {
         <PrivateRouter path="/detail/:id" component={Detail} />
       </Switch>
     </Router>
+
   );
 };
 
