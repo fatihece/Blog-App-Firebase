@@ -25,7 +25,6 @@ const AuthContextProvider = ({ children }) => {
         return unsubscribe;
     }, [])
     
-
     function signup(email, password) {
     return auth.createUserWithEmailAndPassword(email, password);
   }
@@ -62,9 +61,9 @@ const AuthContextProvider = ({ children }) => {
         resetPassword,
         updatePassword,
         updateEmail,
-        loginWithGoogle
-        
-}
+        loginWithGoogle  
+  }
+  
     return  <AuthContext.Provider value={values}>
               {!loading && children}
             </AuthContext.Provider>;
