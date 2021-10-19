@@ -12,7 +12,6 @@ export function useAuth() {
 }
 
 
-
 const AuthContextProvider = ({ children }) => {
 
     const [currentUser, setCurrentUser] = useState();
