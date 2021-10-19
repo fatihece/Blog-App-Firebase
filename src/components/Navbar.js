@@ -33,13 +33,15 @@ const useStyles = makeStyles((theme) => ({
       color: "wheat",
     },
   },
-  
+
   appBar: {
     backgroundColor: "#046582",
   },
+
   logo: {
     width: 40,
   },
+  
   linkStyle: {
     textDecoration: "none",
     color: "black",
