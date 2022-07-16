@@ -78,7 +78,7 @@ export default function Navbar() {
             <img src={cwLogo} alt="logo" className={classes.logo} />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            ──── <span>{"<Clarusway IT />"}</span> BLOG ────
+            ──── <span>{"<Frontend Journey />"}</span> BLOG ────
           </Typography>
 
           <div>
