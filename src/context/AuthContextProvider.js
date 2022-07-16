@@ -1,4 +1,3 @@
-import { TvRounded } from "@material-ui/icons";
 import React, { useContext, createContext, useState, useEffect } from "react";
 import { auth, googleProvider } from "../utils/firebaseUtil";
 
@@ -22,6 +21,7 @@ const AuthContextProvider = ({ children }) => {
     return unsubscribe;
   }, []);
 
+  // services
   function signup(email, password) {
     return auth.createUserWithEmailAndPassword(email, password);
   }
@@ -50,6 +50,7 @@ const AuthContextProvider = ({ children }) => {
   function updatePassword(password) {
     return currentUser.updatePassword(password);
   }
+
   const values = {
     currentUser,
     signup,
