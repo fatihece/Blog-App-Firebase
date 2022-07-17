@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 import Dashboard from "../pages/Dashboard";
 import UpdateBlog from "../pages/UpdateBlog";
 import Detail from "../pages/Detail";
-import Login from "../pages/Login"
-import Register from "../pages/Register"
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 import NewBlog from "../pages/NewBlog";
 import Profile from "../pages/Profile";
@@ -13,21 +13,19 @@ import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
   return (
-
     <Router>
       <Navbar />
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/" exact component={Dashboard} />
-
+        {/* "/profile" propu gelirse sen bunu PrivateRouter componentına yönlendir */}
         <PrivateRouter path="/profile" component={Profile} />
         <PrivateRouter path="/new-blog" component={NewBlog} />
         <PrivateRouter path="/update-blog" component={UpdateBlog} />
         <PrivateRouter path="/detail/:id" component={Detail} />
       </Switch>
     </Router>
-
   );
 };
 

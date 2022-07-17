@@ -1,4 +1,4 @@
-import React  from "react";
+import React,{useState}  from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -9,7 +9,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import cwLogo from "../assets/cw.jpeg";
 import { useAuth } from "../context/AuthContextProvider";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,11 +49,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+const history = useHistory()
+  let { currentUser,logout } = useAuth();
 
-  const { currentUser } = useAuth();
-
+  currentUser = {
+    email: "fati@gmailcom", 
+  };
   console.log(currentUser);
 
   const handleMenu = (event) => {
@@ -63,6 +66,16 @@ export default function Navbar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  
+  const handleLogout = () => {
+    setAnchorEl(null);
+    logout();
+  };
+
+  const handleDashboard = ()=>{
+    setAnchorEl(null);
+    history.push("/")
+  }
 
   return (
     <div className={classes.root}>
@@ -73,6 +86,7 @@ export default function Navbar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
+            onClick={handleDashboard}
           >
             <img src={cwLogo} alt="logo" className={classes.logo} />
           </IconButton>
@@ -113,7 +127,7 @@ export default function Navbar() {
                   <MenuItem onClick={handleClose}>New Blog</MenuItem>
                 </Link>
                 <Link to="/login" className={classes.linkStyle}>
-                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  <MenuItem onClick={handleLogout}>Logout</MenuItem>
                 </Link>
               </Menu>
             ) : (
