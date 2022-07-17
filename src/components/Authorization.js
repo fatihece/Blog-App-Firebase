@@ -14,7 +14,6 @@ import * as yup from "yup";
 import { useAuth } from "../context/AuthContextProvider";
 import loadingGif from "../assets/loading.gif";
 import googlePng from "../assets/google.png";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
@@ -88,8 +87,8 @@ const ValidationSchema = yup.object().shape({
   email: yup
     .string("Enter your email")
     .email("Invalid email address")
-    .required("Required"),
-  password: yup.string("Enter your password").required("password required"),
+    .required("Email is required!"),
+  password: yup.string("Enter your password").required("Password is required!"),
 });
 
 const LoginAndRegisterForm = (props) => {

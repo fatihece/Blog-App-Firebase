@@ -10,7 +10,7 @@ export  const Login = () => {
 
 export const Register = () => {
   return (
-    <Autorization  method="Signup"/>
+    <Autorization  method="Register"/>
   );
 };
 

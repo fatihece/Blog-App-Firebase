@@ -61,9 +61,9 @@ export default function Navbar() {
   const history = useHistory();
   let { currentUser, logout } = useAuth();
 
-  currentUser = {
-    email: "fati@gmailcom",
-  };
+  // currentUser = {
+  //   email: "fati@gmailcom",
+  // };
   console.log(currentUser); 
 
   const handleMenu = (event) => {

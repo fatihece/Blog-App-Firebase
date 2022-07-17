@@ -7,9 +7,9 @@ const PrivateRouter = (props) => {
   let { currentUser } = useAuth();
 
 
-   currentUser = {
-     email: "fati@gmailcom", 
-   };
+  //  currentUser = {
+  //    email: "fati@gmailcom", 
+  //  };
 
   return currentUser ? (
     <Route path={props.path} component={props.component} />
