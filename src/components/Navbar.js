@@ -1,4 +1,4 @@
-import React,{useState}  from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -40,10 +40,17 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     width: 40,
   },
-  
+
   linkStyle: {
     textDecoration: "none",
     color: "black",
+  },
+
+  login: {
+    padding: 10,
+    fontSize: 20,
+    color: "white",
+    textDecoration: "none",
   },
 }));
 
@@ -51,13 +58,13 @@ export default function Navbar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-const history = useHistory()
-  let { currentUser,logout } = useAuth();
+  const history = useHistory();
+  let { currentUser, logout } = useAuth();
 
   currentUser = {
-    email: "fati@gmailcom", 
+    email: "fati@gmailcom",
   };
-  console.log(currentUser);
+  console.log(currentUser); 
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -66,16 +73,16 @@ const history = useHistory()
   const handleClose = () => {
     setAnchorEl(null);
   };
-  
+
   const handleLogout = () => {
     setAnchorEl(null);
     logout();
   };
 
-  const handleDashboard = ()=>{
+  const handleDashboard = () => {
     setAnchorEl(null);
-    history.push("/")
-  }
+    history.push("/");
+  };
 
   return (
     <div className={classes.root}>
@@ -90,9 +97,14 @@ const history = useHistory()
           >
             <img src={cwLogo} alt="logo" className={classes.logo} />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            ──── <span>{"<Frontend Journey />"}</span> BLOG ────
-          </Typography>
+          <div className={classes.root}>
+          <Link to="/" className={classes.login}>
+            <Typography variant="h6" className={classes.title}>
+              ──── <span>{"<Frontend Journey />"}</span> BLOG ────
+            </Typography>
+          </Link>
+          </div>
+          
 
           <div>
             <IconButton

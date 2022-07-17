@@ -1,9 +1,10 @@
 import React from "react";
+import Autorization from "../components/Authorization";
 
 const Login = () => {
   return (
     <div>
-      <h1>LOGIN</h1>
+    <Autorization method="Login" />
     </div>
   );
 };
