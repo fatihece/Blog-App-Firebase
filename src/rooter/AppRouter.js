@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 import Dashboard from "../pages/Dashboard";
 import UpdateBlog from "../pages/UpdateBlog";
 import Detail from "../pages/Detail";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
+import {Register} from "../pages/LoginRegister";
+import {Login} from "../pages/LoginRegister";
 
 import NewBlog from "../pages/NewBlog";
 import Profile from "../pages/Profile";
