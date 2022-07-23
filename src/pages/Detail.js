@@ -67,10 +67,9 @@ const Detail = () => {
   const classes = useStyles();
   const { currentUser } = useAuth();
   const history = useHistory();
-const{id} = useParams()
+  const{id} = useParams()
   const { getOneBlog, deleteOneBlog } = useBlog();
   const result = getOneBlog(id);
-  console.log("result",result);
 
   const deleteHandler = (id) => {
     deleteOneBlog(id);
