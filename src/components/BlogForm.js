@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BlogForm = () => {
+const BlogForm = ({handler}) => {
   return (
     <div>BlogForm</div>
   )
