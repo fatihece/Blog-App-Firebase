@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   blogImg: {
     width: 200,
+    
   },
 
   title: {
