@@ -4,11 +4,10 @@
 
   </br>
 <a href='https://blog-app-fb.netlify.app/' target='_blank' align="center">
-  <img src='https://user-images.githubusercontent.com/81515422/180648438-3c8cd91e-1f28-47bf-abea-77a05aecc7ef.mp4' width="950" />
+  <img src='https://user-images.githubusercontent.com/81515422/180648833-ae5e9955-697d-4633-aa0d-545abae79fe6.gif' width="950" />
 </a>
 
 ## Objective
-
 
 Building a blog app with using ReactJS with firebase.
 
