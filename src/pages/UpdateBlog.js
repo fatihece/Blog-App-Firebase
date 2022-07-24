@@ -10,7 +10,7 @@ import BlogForm from "../components/BlogForm";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: 90,
+    marginTop: 20,
   },
   paper: {
     marginTop: theme.spacing(4),
@@ -31,13 +31,14 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontWeight: "bold",
     "&:hover": {
-      color: "#046582",
+      color: "wheat",
     },
   },
   title: {
     fontSize: 35,
     fontFamily: "Girassol",
-    color: "#046582",
+    color: "wheat",
+    marginBottom:20
   },
 }));
 const UpdateBlog = ({ match }) => {
@@ -69,14 +70,15 @@ const UpdateBlog = ({ match }) => {
   return (
     <Container maxWidth="xs" className={classes.root}>
       <div className={classes.paper}>
+      <Typography component="h1" variant="h5" className={classes.title}>
+          ── Update Blog ──
+        </Typography>
         <img
           src={updatedBlog?.image || placeholderPng}
           alt="blog"
           className={classes.blogImg}
         />
-        <Typography component="h1" variant="h5" className={classes.title}>
-          ── Update Blog ──
-        </Typography>
+     
         <BlogForm blog={updatedBlog} handler={handler} />
       </div>
     </Container>

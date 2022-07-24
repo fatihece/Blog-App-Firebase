@@ -17,10 +17,10 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: "Girassol",
     textAlign: "center",
-    color: "#046582",
+    color: "wheat",
   },
   mainRoot: {
-    marginTop: 70,
+    marginTop: 20,
   },
 }));
 

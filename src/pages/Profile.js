@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     padding: 25,
+    backgroundColor:"#eee"
   },
 
   title: {
@@ -28,7 +29,6 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     height: 500,
-    marginTop: 100,
   },
   image: {
     borderRadius: "50%",

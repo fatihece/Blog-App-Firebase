@@ -23,8 +23,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#046582",
   },
   blogImg: {
-    width: 200,
-    
+    width: 200,   
   },
 
   title: {

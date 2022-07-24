@@ -23,16 +23,15 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 70,
     marginBottom: 20,
   },
   cardRoot: {
     minWidth: 250,
     width: "75vw",
-    // maxWidth: 700,
+     maxWidth: 700,
   },
   media: {
-    // minHeight: "30vh",
+   minHeight: "30vh",
     height: "0",
     paddingTop: "56.25%", // 16:9
   },
@@ -47,6 +46,12 @@ const useStyles = makeStyles({
     minHeight: "200px",
   },
   title: {
+    fontFamily: "Girassol",
+    textAlign: "center",
+    margin: 20,
+    color: "wheat",
+  },
+  cardTitle: {
     fontFamily: "Girassol",
     textAlign: "center",
     margin: 20,
@@ -101,7 +106,7 @@ const Detail = () => {
                     gutterBottom
                     variant="h5"
                     component="h2"
-                    className={classes.title}
+                    className={classes.cardTitle}
                   >
                     {item.title}
                   </Typography>
